@@ -1,0 +1,25 @@
+/**
+ * Bud file for templates
+ */
+
+'use strict'
+
+const path = require('path')
+const aglob = require('aglob')
+
+module.exports = {
+  force: true,
+  mode: '444',
+  data: {
+    templates: aglob.sync(
+      `${__dirname}/../assets/*.hbs`
+    ).map((filename) => ({
+      name: path.basename(filename, '.js.hbs'),
+      filename: path.relative(`${__dirname}/../`, filename)
+    }))
+  }
+}
+
+if (!module.parent) {
+  require('coz').render(__filename)
+}

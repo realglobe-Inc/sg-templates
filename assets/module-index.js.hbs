@@ -1,0 +1,17 @@
+/**
+ * {{pkg.description}}
+ * @module {{pkg.name}}
+ * @version {{pkg.version}}
+ */
+
+'use strict'
+
+const {{pascalcase name}} = require('./{{snakecase name}}')
+
+let lib = new {{pascalcase name}}({})
+
+Object.assign(lib, {{pascalcase name}}, {
+  {{pascalcase name}}
+})
+
+module.exports = lib

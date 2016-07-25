@@ -1,0 +1,46 @@
+{
+  "name": "sg-templates",
+  "version": "1.0.0",
+  "description": "Templates for SUGOS",
+  "main": "lib",
+  "scripts": {
+    "test": "./ci/test.js",
+    "prepublish": "./ci/build.js"
+  },
+  "repository": "realglobe-Inc/sg-templates",
+  "keywords": [
+    "SUGOS"
+  ],
+  "author": {
+    "name": "Taka Okunishi",
+    "email": "okunishitaka.com@gmail.com",
+    "url": "http://okunishitaka.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/realglobe-Inc/sg-templates/issues"
+  },
+  "homepage": "https://github.com/realglobe-Inc/sg-templates#readme",
+  "dependencies": {
+    "co": "^4.6.0"
+  },
+  "devDependencies": {
+    "aglob": "^1.0.1",
+    "amocha": "^1.0.8",
+    "ape-formatting": "^1.0.2",
+    "ape-releasing": "^4.0.2",
+    "ape-reporting": "^3.0.1",
+    "ape-tasking": "^4.0.7",
+    "ape-tmpl": "^5.0.14",
+    "ape-updating": "^4.0.4",
+    "coz": "^6.0.14",
+    "injectmock": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=6",
+    "npm": ">=3"
+  },
+  "publishConfig": {
+    "registry": "https://realglobe.artifactoryonline.com/realglobe/api/npm/npm-local"
+  }
+}

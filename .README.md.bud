@@ -1,0 +1,38 @@
+/**
+ * Bud file for README.md
+ */
+
+'use strict'
+
+const { readmeMdBud } = require('ape-tmpl')
+const pkg = require('./package.json')
+const path = require('path')
+
+module.exports = readmeMdBud({
+  pkg,
+  repo: pkg.repository,
+  sections: 'doc/guides/*.md.hbs',
+  badges: {
+    travis: true,
+    codeclimate: true,
+    codeclimateCoverage: true,
+    gemnasium: false,
+    npm: true,
+    standard: true
+  },
+  overview: 'doc/overview.md',
+  links: require('./doc/links'),
+  vars: {
+    get templates () {
+      let templates = require('./lib/templates')
+      return Object.keys(templates).map((name) => ({
+        name,
+        path: path.relative(process.cwd(), templates[ name ])
+      }))
+    }
+  }
+})
+
+if (!module.parent) {
+  require('coz').render(__filename)
+}

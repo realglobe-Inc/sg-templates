@@ -1,0 +1,14 @@
+/**
+ * Template paths
+ * @module Templates
+ */
+
+'use strict'
+
+const path = require('path')
+
+let resolve = (filename) => path.resolve(__dirname, '..', filename)
+
+{{#each templates}}
+exports.{{camelcase name}} = resolve('{{filename}}')
+{{/each}}

@@ -6,11 +6,12 @@
 
 'use strict'
 
+const create = require('./create')
 const {{pascalcase name}} = require('./{{snakecase name}}')
 {{#each sub}}const {{@key}} = require('{{{this}}}')
 {{/each}}
 
-let lib = new {{pascalcase name}}({})
+let lib = create.bind(this)
 
 Object.assign(lib, {{pascalcase name}}, {
 {{#each sub}}  {{@key}},

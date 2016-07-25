@@ -16,6 +16,7 @@ let lib = create.bind(this)
 Object.assign(lib, {{pascalcase name}}, {
 {{#each sub}}  {{@key}},
 {{/each}}
+  create,
   {{pascalcase name}}
 })
 

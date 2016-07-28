@@ -37,6 +37,17 @@ describe('templates', function () {
         }
       }
     })
+
+    yield coz.render({
+      tmpl: Templates.reactTest,
+      force: true,
+      mkdirp: true,
+      mode: '444',
+      path: `${__dirname}/../tmp/testing-react-test/hoge_test.jsx`,
+      data: {
+        name: 'Hoge'
+      }
+    })
   }))
 })
 

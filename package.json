@@ -1,6 +1,6 @@
 {
   "name": "sg-templates",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Templates for SUGOS",
   "main": "lib",
   "scripts": {
@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "aglob": "^1.0.1",
-    "amocha": "^1.0.8",
+    "amocha": "^1.0.9",
     "ape-formatting": "^1.0.2",
     "ape-releasing": "^4.0.2",
     "ape-reporting": "^3.0.1",

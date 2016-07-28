@@ -14,7 +14,7 @@ module.exports = {
     templates: aglob.sync(
       `${__dirname}/../assets/*.hbs`
     ).map((filename) => ({
-      name: path.basename(filename, '.js.hbs'),
+      name: path.basename(filename, '.hbs'),
       filename: path.relative(`${__dirname}/../`, filename)
     }))
   }

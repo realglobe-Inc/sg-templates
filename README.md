@@ -113,6 +113,7 @@ Templates
 | Name | Path |
 | --- | --- |
 | moduleIndex | [assets/module-index.hbs](assets/module-index.hbs) |
+| reactIndex | [assets/react-index.hbs](assets/react-index.hbs) |
 | reactTest | [assets/react-test.hbs](assets/react-test.hbs) |
 
 

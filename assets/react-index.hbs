@@ -1,0 +1,18 @@
+/**
+ * {{pkg.description}}
+ * @module {{pkg.name}}
+ * @version {{pkg.version}}
+ */
+'use strict'
+
+{{#each components}}
+import {{pascalcase this}} from './{{{snakecase this}}}'
+{{/each}}
+
+export {
+{{#each components}}
+  {{pascalcase this}}{{#if @last}}{{else}},
+  {{/if}}
+{{/each}}
+
+}

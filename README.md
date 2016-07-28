@@ -112,8 +112,8 @@ Templates
 
 | Name | Path |
 | --- | --- |
-| moduleIndex | [assets/module-index.js.hbs](assets/module-index.js.hbs) |
-| reactTestHbs | [assets/react-test.hbs](assets/react-test.hbs) |
+| moduleIndex | [assets/module-index.hbs](assets/module-index.hbs) |
+| reactTest | [assets/react-test.hbs](assets/react-test.hbs) |
 
 
 <!-- Section from "doc/guides/03.Templates.md.hbs" End -->

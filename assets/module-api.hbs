@@ -7,7 +7,7 @@
   + [{{name}}({{paramDesc}})](#{{{spinalcase ../pkg.name}}}-function-{{spinalcase name}})
 {{/each}}
 {{#each signature.classes}}
-+ {{name}} Class
++ [{{name}}]({{{spinalcase ../pkg.name}}}-classes) Class
 {{#with constructor}}
   + [new {{../name}}({{paramDesc}})](#{{{spinalcase ../../pkg.name}}}-classes-{{spinalcase ../name}}-constructor)
 {{/with}}
@@ -43,6 +43,7 @@
 
 {{#each signature.classes}}
 
+<a name="{{{spinalcase ../pkg.name}}}-classes"/>
 ## {{name}} Class
 
 {{description}}{{constructor.description}}
@@ -50,7 +51,7 @@
 {{#with constructor}}
 
 <a name="{{{spinalcase ../../pkg.name}}}-classes-{{spinalcase ../name}}-constructor" />
-### new {{../name}}()
+### new {{../name}}({{paramDesc}})
 
 Constructor of {{../name}} class
 

@@ -1,0 +1,99 @@
+# {{pkg.name}}@{{pkg.version}}
+
+{{pkg.description}}
+
++ Functions
+{{#each signature.functions}}
+  + [{{name}}({{paramDesc}})](#{{{spinalcase ../pkg.name}}}-function-{{spinalcase name}})
+{{/each}}
+{{#each signature.classes}}
++ {{name}} Class
+{{#with constructor}}
+  + [new {{../name}}({{paramDesc}})](#{{{spinalcase ../../pkg.name}}}-classes-{{spinalcase ../name}}-constructor)
+{{/with}}
+{{#each functions}}
+  + [{{../instanceName}}.{{name}}({{paramDesc}})](#{{{spinalcase ../../pkg.name}}}-classes-{{spinalcase ../name}}-{{name}})
+{{/each}}
+{{/each}}
+
+## Functions
+
+{{#each signature.functions}}
+<a name="{{{spinalcase ../pkg.name}}}-function-{{spinalcase name}}" />
+### {{name}}({{paramDesc}}){{#if returns.type}} -> `{{{returns.type}}}`{{/if}}
+
+{{{description}}}
+{{#if parameters}}
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+{{#each parameters}}
+| {{name}} | {{type}} | {{{description}}} |
+{{/each}}
+
+{{/if}}
+{{#if examples}}
+```javascript
+{{#each examples}}
+{{{this}}}
+{{/each}}
+```
+{{/if}}
+{{/each}}
+
+{{#each signature.classes}}
+
+## {{name}} Class
+
+{{description}}{{constructor.description}}
+
+{{#with constructor}}
+
+<a name="{{{spinalcase ../../pkg.name}}}-classes-{{spinalcase ../name}}-constructor" />
+### new {{../name}}()
+
+Constructor of {{../name}} class
+
+{{#if parameters}}
+| Param | Type | Description |
+| ----- | --- | -------- |
+{{#each parameters}}
+| {{name}} | {{type}} | {{{description}}} |
+{{/each}}
+{{/if}}
+{{#if examples}}
+```javascript
+{{#each examples}}
+{{{this}}}
+{{/each}}
+```
+{{/if}}
+
+{{/with}}
+{{#each functions}}
+
+<a name="{{{spinalcase ../../pkg.name}}}-classes-{{spinalcase ../name}}-{{name}}" />
+### {{../instanceName}}.{{name}}({{paramDesc}}){{#if returns.type}} -> `{{{returns.type}}}`{{/if}}
+
+{{{description}}}
+{{#if parameters}}
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+{{#each parameters}}
+| {{name}} | {{type}} | {{{description}}} |
+{{/each}}
+
+{{/if}}
+{{#if examples}}
+```javascript
+{{#each examples}}
+{{{this}}}
+{{/each}}
+```
+{{/if}}
+{{/each}}
+{{/each}}
+
+
+

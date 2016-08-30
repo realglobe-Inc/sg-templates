@@ -25,15 +25,15 @@
     "co": "^4.6.0"
   },
   "devDependencies": {
-    "aglob": "^1.0.1",
-    "amocha": "^1.0.9",
+    "aglob": "^1.0.3",
+    "amocha": "^1.0.14",
     "ape-formatting": "^1.0.2",
-    "ape-releasing": "^4.0.2",
-    "ape-reporting": "^3.0.1",
-    "ape-tasking": "^4.0.7",
-    "ape-tmpl": "^5.0.14",
-    "ape-updating": "^4.0.4",
-    "coz": "^6.0.14",
+    "ape-releasing": "^4.0.4",
+    "ape-reporting": "^3.0.2",
+    "ape-tasking": "^4.0.8",
+    "ape-tmpl": "^5.0.15",
+    "ape-updating": "^4.0.5",
+    "coz": "^6.0.17",
     "injectmock": "^2.0.0"
   },
   "engines": {

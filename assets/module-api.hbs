@@ -19,7 +19,8 @@
 ## Functions
 
 {{#each signature.functions}}
-<a name="{{{spinalcase ../pkg.name}}}-function-{{spinalcase name}}" />
+<a class='md-heading-link' name="{{{spinalcase ../pkg.name}}}-function-{{spinalcase name}}" ></a>
+
 ### {{name}}({{paramDesc}}){{#if returns.type}} -> `{{{returns.type}}}`{{/if}}
 
 {{{description}}}
@@ -43,14 +44,16 @@
 
 {{#each signature.classes}}
 
-<a name="{{{spinalcase ../pkg.name}}}-classes"/>
+<a class='md-heading-link' name="{{{spinalcase ../pkg.name}}}-classes"></a>
+
 ## {{name}} Class
 
 {{description}}{{constructor.description}}
 
 {{#with constructor}}
 
-<a name="{{{spinalcase ../../pkg.name}}}-classes-{{spinalcase ../name}}-constructor" />
+<a class='md-heading-link' name="{{{spinalcase ../../pkg.name}}}-classes-{{spinalcase ../name}}-constructor" ></a>
+
 ### new {{../name}}({{paramDesc}})
 
 Constructor of {{../name}} class
@@ -73,7 +76,8 @@ Constructor of {{../name}} class
 {{/with}}
 {{#each functions}}
 
-<a name="{{{spinalcase ../../pkg.name}}}-classes-{{spinalcase ../name}}-{{name}}" />
+<a class='md-heading-link' name="{{{spinalcase ../../pkg.name}}}-classes-{{spinalcase ../name}}-{{name}}" ></a>
+
 ### {{../instanceName}}.{{name}}({{paramDesc}}){{#if returns.type}} -> `{{{returns.type}}}`{{/if}}
 
 {{{description}}}

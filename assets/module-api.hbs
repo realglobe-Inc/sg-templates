@@ -53,9 +53,9 @@
 {{description}}{{constructor.description}}
 
 {{#if extends.[0]}}
-**Extends**: {{#each extends}}
+**Extends**:
 
-+ `{{{this}}}`
+{{#each extends}}+ `{{{this}}}`
 {{/each}}{{/if}}
 
 {{#with constructor}}

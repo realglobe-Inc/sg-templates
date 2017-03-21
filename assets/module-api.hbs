@@ -6,7 +6,7 @@
 {{#each signature.functions}}
   + [{{name}}({{paramDesc}})](#{{{spinalcase ../pkg.name}}}-function-{{spinalcase name}})
 {{/each}}
-{{#each signature.class}}
+{{#each signature.classes}}
 + [`{{name}}`](#{{{spinalcase ../pkg.name}}}-class) Class
 {{#with constructor}}
   + [new {{../name}}({{paramDesc}})](#{{{spinalcase ../../pkg.name}}}-class-{{spinalcase ../name}}-constructor)
@@ -44,7 +44,7 @@
 {{/if}}
 {{/each}}
 
-{{#each signature.class}}
+{{#each signature.classes}}
 
 <a class='md-heading-link' name="{{{spinalcase ../pkg.name}}}-class"></a>
 

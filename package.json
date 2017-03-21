@@ -1,6 +1,6 @@
 {
   "name": "sg-templates",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Templates for SUGOS",
   "main": "lib",
   "scripts": {

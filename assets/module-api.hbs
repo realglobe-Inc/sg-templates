@@ -6,13 +6,13 @@
 {{#each signature.functions}}
   + [{{name}}({{paramDesc}})](#{{{spinalcase ../pkg.name}}}-function-{{spinalcase name}})
 {{/each}}
-{{#each signature.classes}}
-+ [`{{name}}`](#{{{spinalcase ../pkg.name}}}-classes) Class
+{{#each signature.class}}
++ [`{{name}}`](#{{{spinalcase ../pkg.name}}}-class) Class
 {{#with constructor}}
-  + [new {{../name}}({{paramDesc}})](#{{{spinalcase ../../pkg.name}}}-classes-{{spinalcase ../name}}-constructor)
+  + [new {{../name}}({{paramDesc}})](#{{{spinalcase ../../pkg.name}}}-class-{{spinalcase ../name}}-constructor)
 {{/with}}
 {{#each functions}}
-  + [{{../instanceName}}.{{name}}({{paramDesc}})](#{{{spinalcase ../../pkg.name}}}-classes-{{spinalcase ../name}}-{{name}})
+  + [{{../instanceName}}.{{name}}({{paramDesc}})](#{{{spinalcase ../../pkg.name}}}-class-{{spinalcase ../name}}-{{name}})
 {{/each}}
 {{/each}}
 
@@ -44,9 +44,9 @@
 {{/if}}
 {{/each}}
 
-{{#each signature.classes}}
+{{#each signature.class}}
 
-<a class='md-heading-link' name="{{{spinalcase ../pkg.name}}}-classes"></a>
+<a class='md-heading-link' name="{{{spinalcase ../pkg.name}}}-class"></a>
 
 ## `{{name}}` Class
 
@@ -60,7 +60,7 @@
 
 {{#with constructor}}
 
-<a class='md-heading-link' name="{{{spinalcase ../../pkg.name}}}-classes-{{spinalcase ../name}}-constructor" ></a>
+<a class='md-heading-link' name="{{{spinalcase ../../pkg.name}}}-class-{{spinalcase ../name}}-constructor" ></a>
 
 ### new {{../name}}({{paramDesc}})
 
@@ -86,7 +86,7 @@ Constructor of {{../name}} class
 {{/with}}
 {{#each functions}}
 
-<a class='md-heading-link' name="{{{spinalcase ../../pkg.name}}}-classes-{{spinalcase ../name}}-{{name}}" ></a>
+<a class='md-heading-link' name="{{{spinalcase ../../pkg.name}}}-class-{{spinalcase ../name}}-{{name}}" ></a>
 
 ### {{../instanceName}}.{{name}}({{paramDesc}}){{#if returns.type}} -> `{{{returns.type}}}`{{/if}}
 
